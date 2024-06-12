@@ -23,38 +23,49 @@ const sortOptions = [
 
 const filters = [
   {
-    id: "color",
-    name: "Color",
+    id: "brand",
+    name: "Brands",
     options: [
-      { value: "white", label: "White", checked: false },
-      { value: "beige", label: "Beige", checked: false },
-      { value: "blue", label: "Blue", checked: true },
-      { value: "brown", label: "Brown", checked: false },
-      { value: "green", label: "Green", checked: false },
-      { value: "purple", label: "Purple", checked: false },
+      { value: "Essence", label: "Essence", checked: false },
+
+      { value: "Glamour Beauty", label: "Glamour Beauty", checked: false },
+
+      { value: "Velvet Touch", label: "Velvet Touch", checked: false },
+
+      { value: "Chic Cosmetics", label: "Chic Cosmetics", checked: false },
+
+      { value: "Nail Couture", label: "Nail Couture", checked: false },
+
+      { value: "Calvin Klein", label: "Calvin Klein", checked: false },
+
+      { value: "Chanel", label: "Chanel", checked: false },
+
+      { value: "Dior", label: "Dior", checked: false },
+
+      { value: "Dolce & Gabbana", label: "Dolce & Gabbana", checked: false },
+
+      { value: "Gucci", label: "Gucci", checked: false },
+
+      { value: "Annibale Colombo", label: "Annibale Colombo", checked: false },
+
+      { value: "Furniture Co.", label: "Furniture Co.", checked: false },
+
+      { value: "Knoll", label: "Knoll", checked: false },
+
+      { value: "Bath Trends", label: "Bath Trends", checked: false },
     ],
   },
   {
     id: "category",
     name: "Category",
     options: [
-      { value: "new-arrivals", label: "New Arrivals", checked: false },
-      { value: "sale", label: "Sale", checked: false },
-      { value: "travel", label: "Travel", checked: true },
-      { value: "organization", label: "Organization", checked: false },
-      { value: "accessories", label: "Accessories", checked: false },
-    ],
-  },
-  {
-    id: "size",
-    name: "Size",
-    options: [
-      { value: "2l", label: "2L", checked: false },
-      { value: "6l", label: "6L", checked: false },
-      { value: "12l", label: "12L", checked: false },
-      { value: "18l", label: "18L", checked: false },
-      { value: "20l", label: "20L", checked: false },
-      { value: "40l", label: "40L", checked: true },
+      { value: "beauty", label: "Beauty", checked: false },
+
+      { value: "fragrances", label: "Fragrances", checked: false },
+
+      { value: "furniture", label: "Furniture", checked: false },
+
+      { value: "groceries", label: "Groceries", checked: false },
     ],
   },
 ];
