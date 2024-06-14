@@ -174,6 +174,9 @@ export default function ProductList() {
                                       defaultValue={option.value}
                                       type="checkbox"
                                       defaultChecked={option.checked}
+                                      onChange={(e) => {
+                                        handleFilter(e, section, option);
+                                      }}
                                       className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                                     />
                                     <label
@@ -361,13 +364,13 @@ export default function ProductList() {
                             <div className="mt-4 flex justify-between">
                               <div>
                                 <h3 className="text-sm text-gray-700">
-                                  <a href={product.thumbnail}>
+                                  <div href={product.thumbnail}>
                                     <span
                                       aria-hidden="true"
                                       className="absolute inset-0"
                                     />
                                     {product.title}
-                                  </a>
+                                  </div>
                                 </h3>
                                 <p className="mt-1 text-sm text-gray-500">
                                   <StarIcon className="w-6 h-6 inline"></StarIcon>
