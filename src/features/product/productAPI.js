@@ -9,6 +9,22 @@ export function fetchAllProducts() {
 export function fetchProductsByFilters(filter) {
   // filter ={"category":"frangrances"}
   // filter ={"brand":"Essence"}
+  // TODO:we will on server  support mutilple value
+
+  // reference for sorting functionality
+  //   JSON Server's behavior for sorting changed with different versions.
+
+  // To resolve the issue, update JSON Server using the command:
+
+  // npm install -g json-server
+
+  // After updating, sorting by default will be ascending. No need to use _order:asc
+
+  // GET /products?_sort=price
+
+  // For descending order,
+
+  // ***** use GET /products?_sort=-price ****
   let queryString = "";
   for (let key in filter) {
     queryString += `${key}=${filter[key]}&`;
