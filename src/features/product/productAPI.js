@@ -6,10 +6,7 @@ export function fetchAllProducts() {
     resolve({ data });
   });
 }
-export function fetchProductsByFilters(filter) {
-  // in server side:-
-  // filter ={"category":["frangrances","furniture"]}
-  // sort={_sort:price, order="desc"}
+export function fetchProductsByFilters(filter, sort) {
   // filter ={"brand":"Essence"}
   // TODO:we will on server  support mutilple value
 
@@ -27,9 +24,20 @@ export function fetchProductsByFilters(filter) {
   // For descending order,
 
   // ***** use GET /products?_sort=-price ****
+
+  // in server side:-
+  // filter ={"category":["frangrances","furniture"]}
+  // sort={_sort:"price", order="desc"}
   let queryString = "";
   for (let key in filter) {
-    queryString += `${key}=${filter[key]}&`;
+    const categoryValues = filter[key]; // "[furniture]" << array
+    if (categoryValues.length) {
+      const lastCategoryValue = categoryValues[categoryValues.length - 1];
+      queryString += `${key}=${lastCategoryValue}&`;
+    }
+  }
+  for (let key in sort) {
+    queryString += `${key}=${sort[key]}&`; //_sort:"price"
   }
   return new Promise(async (resolve) => {
     // TODO: we will not hard coded server url here...

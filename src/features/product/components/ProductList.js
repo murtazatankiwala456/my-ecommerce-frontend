@@ -65,6 +65,7 @@ export default function ProductList() {
   const products = useSelector(selectAllProducts);
   const dispatch = useDispatch();
   const [filter, setFilter] = useState({});
+  const [sort, setSort] = useState({});
 
   const handleFilter = (e, section, option) => {
     console.log(e.target.checked);
@@ -72,25 +73,32 @@ export default function ProductList() {
     // remove obj when input box is unchecked
     const newFilter = { ...filter };
     if (e.target.checked) {
-      newFilter[section.id] = option.value;
+      if (newFilter[section.id]) {
+        newFilter[section.id].push(option.value); //{"category":["frangrances","furniture"]}
+      } else {
+        newFilter[section.id] = [option.value]; //[]
+      }
     } else {
-      delete newFilter[section.id];
+      // delete array item after unchecked...
+      const index = newFilter[section.id].findIndex(
+        (el) => el === option.value
+      );
+      newFilter[section.id].splice(index, 1);
     }
+    console.log({ newFilter });
     setFilter(newFilter);
-    console.log(section.id, option.value);
   };
   const handleSort = (e, option) => {
-    const newFilter = {
-      ...filter,
-      _sort: option.order === "desc" ? `-${option.sort}` : option.sort,
+    const sort = {
+      _sort: option.order === "desc" ? `-${option.sort}` : option.sort, //{_sort:"price", order="desc"}
     };
-    setFilter(newFilter);
-    dispatch(fetchProductsByFiltersAsync(newFilter));
+    console.log(sort);
+    setSort(sort);
   };
   // making API call when dispatch or when filter is applied in a one go....
   useEffect(() => {
-    dispatch(fetchProductsByFiltersAsync(filter));
-  }, [dispatch, filter]);
+    dispatch(fetchProductsByFiltersAsync({ filter, sort }));
+  }, [dispatch, filter, sort]);
 
   return (
     <div className="bg-white">
