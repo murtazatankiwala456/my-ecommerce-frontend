@@ -7,7 +7,9 @@ export function fetchAllProducts() {
   });
 }
 export function fetchProductsByFilters(filter) {
-  // filter ={"category":"frangrances"}
+  // in server side:-
+  // filter ={"category":["frangrances","furniture"]}
+  // sort={_sort:price, order="desc"}
   // filter ={"brand":"Essence"}
   // TODO:we will on server  support mutilple value
 

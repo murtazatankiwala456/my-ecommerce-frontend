@@ -67,9 +67,17 @@ export default function ProductList() {
   const [filter, setFilter] = useState({});
 
   const handleFilter = (e, section, option) => {
-    const newFilter = { ...filter, [section.id]: option.value };
+    console.log(e.target.checked);
+    // TODO: we will on server  support mutilple value
+    // remove obj when input box is unchecked
+    const newFilter = { ...filter };
+    if (e.target.checked) {
+      newFilter[section.id] = option.value;
+    } else {
+      delete newFilter[section.id];
+    }
     setFilter(newFilter);
-    dispatch(fetchProductsByFiltersAsync(newFilter));
+    console.log(section.id, option.value);
   };
   const handleSort = (e, option) => {
     const newFilter = {
@@ -79,10 +87,10 @@ export default function ProductList() {
     setFilter(newFilter);
     dispatch(fetchProductsByFiltersAsync(newFilter));
   };
-
+  // making API call when dispatch or when filter is applied in a one go....
   useEffect(() => {
-    dispatch(fetchAllProductsAsync());
-  }, [dispatch]);
+    dispatch(fetchProductsByFiltersAsync(filter));
+  }, [dispatch, filter]);
 
   return (
     <div className="bg-white">
