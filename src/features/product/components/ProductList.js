@@ -4,6 +4,7 @@ import {
   fetchAllProductsAsync,
   fetchProductsByFiltersAsync,
   selectAllProducts,
+  selectTotalItems,
 } from "../productSlice";
 import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
 import { StarIcon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -64,6 +65,7 @@ function classNames(...classes) {
 export default function ProductList() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const products = useSelector(selectAllProducts);
+  const totalItems = useSelector(selectTotalItems);
   const dispatch = useDispatch();
   const [filter, setFilter] = useState({});
   const [sort, setSort] = useState({});
@@ -208,7 +210,12 @@ export default function ProductList() {
 
           {/* section of product and filters ends */}
 
-          <Pagination page={page} setPage={setPage} handlePage={handlePage} />
+          <Pagination
+            page={page}
+            setPage={setPage}
+            handlePage={handlePage}
+            totalItems={totalItems}
+          />
         </main>
       </div>
     </div>
@@ -437,7 +444,7 @@ function ProductGrid({ products }) {
   );
 }
 
-function Pagination({ page, setPage, handlePage, totalItems = 30 }) {
+function Pagination({ page, setPage, handlePage, totalItems }) {
   return (
     <div className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
       <div className="flex flex-1 justify-between sm:hidden">
@@ -457,7 +464,7 @@ function Pagination({ page, setPage, handlePage, totalItems = 30 }) {
       <div className="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
         <div>
           <p className="text-sm text-gray-700">
-            Showing
+            Showing-
             {/* (3-1) * 6 + 1 =13 */}
             <span className="font-medium">
               {(page - 1) * ITEMS_PER_PAGE + 1}
