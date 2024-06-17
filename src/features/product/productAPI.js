@@ -6,7 +6,7 @@ export function fetchAllProducts() {
     resolve({ data });
   });
 }
-export function fetchProductsByFilters(filter, sort) {
+export function fetchProductsByFilters(filter, sort, pagination) {
   // filter ={"brand":"Essence"}
   // TODO:we will on server  support mutilple value
 
@@ -28,6 +28,7 @@ export function fetchProductsByFilters(filter, sort) {
   // in server side:-
   // filter ={"category":["frangrances","furniture"]}
   // sort={_sort:"price", order="desc"}
+  // sort={_page:3, _per_page=6}
   let queryString = "";
   for (let key in filter) {
     const categoryValues = filter[key]; // "[furniture]" << array
@@ -38,6 +39,10 @@ export function fetchProductsByFilters(filter, sort) {
   }
   for (let key in sort) {
     queryString += `${key}=${sort[key]}&`; //_sort:"price"
+  }
+  console.log(pagination);
+  for (let key in pagination) {
+    queryString += `${pagination}=${pagination[key]}&`; //_page:3
   }
   return new Promise(async (resolve) => {
     // TODO: we will not hard coded server url here...
