@@ -20,7 +20,7 @@ export const fetchProductsByFiltersAsync = createAsyncThunk(
     const response = await fetchProductsByFilters(filter, sort, pagination);
 
     // The value we return becomes the `fulfilled` action payload
-    return response.data;
+    return response.data.data; //pagination array comes from data array!!!!!
   }
 );
 

@@ -42,7 +42,7 @@ export function fetchProductsByFilters(filter, sort, pagination) {
   }
   console.log(pagination);
   for (let key in pagination) {
-    queryString += `${pagination}=${pagination[key]}&`; //_page:3
+    queryString += `${key}=${pagination[key]}&`; //_page:3
   }
   return new Promise(async (resolve) => {
     // TODO: we will not hard coded server url here...
