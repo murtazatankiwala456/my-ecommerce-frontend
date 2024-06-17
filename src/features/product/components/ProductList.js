@@ -109,6 +109,11 @@ export default function ProductList() {
     dispatch(fetchProductsByFiltersAsync({ filter, sort, pagination }));
   }, [dispatch, filter, sort, page]);
 
+  useEffect(() => {
+    //page always come to first if there is change in totalItems and sorting
+    setPage(1);
+  }, [totalItems, sort]);
+
   return (
     <div className="bg-white">
       <div>
@@ -464,15 +469,18 @@ function Pagination({ page, setPage, handlePage, totalItems }) {
       <div className="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
         <div>
           <p className="text-sm text-gray-700">
-            Showing-
-            {/* (3-1) * 6 + 1 =13 */}
+            Showing {/* (3-1) * 6 + 1 =13 */}
             <span className="font-medium">
               {(page - 1) * ITEMS_PER_PAGE + 1}
             </span>{" "}
             {/* 3 * 6 = 18 */}
-            to <span className="font-medium">
-              {page * ITEMS_PER_PAGE}{" "}
-            </span> of <span className="font-medium">{totalItems}</span> results
+            to{" "}
+            <span className="font-medium">
+              {page * ITEMS_PER_PAGE > totalItems
+                ? totalItems
+                : page * ITEMS_PER_PAGE}{" "}
+            </span>{" "}
+            of <span className="font-medium">{totalItems}</span> results
           </p>
         </div>
         <div>
