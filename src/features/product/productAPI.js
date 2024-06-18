@@ -54,3 +54,17 @@ export function fetchProductsByFilters(filter, sort, pagination) {
     resolve({ data: { products: data.data, totalItems: data.items } });
   });
 }
+export function fetchCategories() {
+  return new Promise(async (resolve) => {
+    const response = await fetch("http://localhost:8080/categories");
+    const data = await response.json();
+    resolve({ data });
+  });
+}
+export function fetchBrands() {
+  return new Promise(async (resolve) => {
+    const response = await fetch("http://localhost:8080/brands");
+    const data = await response.json();
+    resolve({ data });
+  });
+}

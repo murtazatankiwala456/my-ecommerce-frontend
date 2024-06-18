@@ -1719,5 +1719,99 @@
       ],
       "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Kiwi/thumbnail.png"
     }
+  ],
+  "brands": [
+    {
+      "value": "Essence",
+      "label": "Essence",
+      "checked": false
+    },
+    {
+      "value": "Glamour Beauty",
+      "label": "Glamour Beauty",
+      "checked": false
+    },
+    {
+      "value": "Velvet Touch",
+      "label": "Velvet Touch",
+      "checked": false
+    },
+    {
+      "value": "Chic Cosmetics",
+      "label": "Chic Cosmetics",
+      "checked": false
+    },
+    {
+      "value": "Nail Couture",
+      "label": "Nail Couture",
+      "checked": false
+    },
+    {
+      "value": "Calvin Klein",
+      "label": "Calvin Klein",
+      "checked": false
+    },
+    {
+      "value": "Chanel",
+      "label": "Chanel",
+      "checked": false
+    },
+    {
+      "value": "Dior",
+      "label": "Dior",
+      "checked": false
+    },
+    {
+      "value": "Dolce & Gabbana",
+      "label": "Dolce & Gabbana",
+      "checked": false
+    },
+    {
+      "value": "Gucci",
+      "label": "Gucci",
+      "checked": false
+    },
+    {
+      "value": "Annibale Colombo",
+      "label": "Annibale Colombo",
+      "checked": false
+    },
+    {
+      "value": "Furniture Co.",
+      "label": "Furniture Co.",
+      "checked": false
+    },
+    {
+      "value": "Knoll",
+      "label": "Knoll",
+      "checked": false
+    },
+    {
+      "value": "Bath Trends",
+      "label": "Bath Trends",
+      "checked": false
+    }
+  ],
+  "categories": [
+    {
+      "value": "beauty",
+      "label": "Beauty",
+      "checked": false
+    },
+    {
+      "value": "fragrances",
+      "label": "Fragrances",
+      "checked": false
+    },
+    {
+      "value": "furniture",
+      "label": "Furniture",
+      "checked": false
+    },
+    {
+      "value": "groceries",
+      "label": "Groceries",
+      "checked": false
+    }
   ]
 }
