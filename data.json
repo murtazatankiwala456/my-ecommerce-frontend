@@ -1981,7 +1981,7 @@
         "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
       ],
       "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png",
-      "quantity": 4,
+      "quantity": 1,
       "user": "cb1b"
     },
     {
@@ -2043,7 +2043,7 @@
         "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png"
       ],
       "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/thumbnail.png",
-      "quantity": 1,
+      "quantity": 3,
       "user": "cb1b"
     }
   ]

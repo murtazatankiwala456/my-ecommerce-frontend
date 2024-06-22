@@ -1,6 +1,10 @@
 import React, { useState, Fragment } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { selectItems, updateCartAsync } from "./cartSlice";
+import {
+  deleteItemFromCartAsync,
+  selectItems,
+  updateCartAsync,
+} from "./cartSlice";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
@@ -16,6 +20,10 @@ export default function Cart() {
   const totalItems = items.reduce((total, item) => item.quantity + total, 0);
   const handleQuantity = (e, item) => {
     dispatch(updateCartAsync({ ...item, quantity: +e.target.value }));
+  };
+
+  const handleRemove = (e, id) => {
+    dispatch(deleteItemFromCartAsync(id));
   };
   return (
     <>
@@ -61,6 +69,7 @@ export default function Cart() {
                             onChange={(e) => {
                               handleQuantity(e, item);
                             }}
+                            value={item.quantity}
                           >
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -72,6 +81,9 @@ export default function Cart() {
 
                         <div className="flex">
                           <button
+                            onClick={(e) => {
+                              handleRemove(e, item.id);
+                            }}
                             type="button"
                             className="font-medium text-indigo-600 hover:text-indigo-500"
                           >
