@@ -11,6 +11,7 @@ import {
   selectLoggedInUser,
   updateUserAsync,
 } from "../features/auth/authSlice";
+import { createOrderAsync } from "../features/order/orderSlice";
 import { useState } from "react";
 
 function Checkout() {
@@ -48,6 +49,20 @@ function Checkout() {
   const handlePayment = (e) => {
     console.log(e.target.value);
     setpaymentMethod(e.target.value); // cash/card
+  };
+  const handleOrder = (e) => {
+    const order = {
+      items,
+      totalAmount,
+      totalItems,
+      user,
+      selectedAddress,
+      paymentMethod,
+    };
+    dispatch(createOrderAsync(order));
+    // TODO: redirect to order success page
+    // TODO: clear cart after order
+    // TODO: on server change the stock number of items
   };
 
   return (
@@ -409,12 +424,12 @@ function Checkout() {
                   Shipping and taxes calculated at checkout.
                 </p>
                 <div className="mt-6">
-                  <Link
-                    to="/checkout"
-                    className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                  <div
+                    onClick={handleOrder}
+                    className="flex items-center cursor-pointer justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
                   >
-                    Checkout
-                  </Link>
+                    Order Now
+                  </div>
                 </div>
                 <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                   <p>
