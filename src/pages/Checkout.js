@@ -51,16 +51,20 @@ function Checkout() {
     setpaymentMethod(e.target.value); // cash/card
   };
   const handleOrder = (e) => {
-    const order = {
-      items,
-      totalAmount,
-      totalItems,
-      user,
-      selectedAddress,
-      paymentMethod,
-    };
-    dispatch(createOrderAsync(order));
-    // TODO: redirect to order success page
+    if (selectedAddress && paymentMethod) {
+      const order = {
+        items,
+        totalAmount,
+        totalItems,
+        user,
+        selectedAddress,
+        paymentMethod,
+      };
+      dispatch(createOrderAsync(order));
+      // TODO: redirect to order success page
+    } else {
+      alert("Enter Address and  Payment Method");
+    }
     // TODO: clear cart after order
     // TODO: on server change the stock number of items
   };
