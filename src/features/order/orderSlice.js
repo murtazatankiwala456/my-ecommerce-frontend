@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { createOrder } from "./orderAPI";
+import { resetCart } from "../cart/cartAPI";
 
 const initialState = {
   orders: [],
@@ -23,6 +24,9 @@ export const orderSlice = createSlice({
     increment: (state) => {
       state.value += 1;
     },
+    resetOrder: (state) => {
+      state.currentOrder = null;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -37,7 +41,7 @@ export const orderSlice = createSlice({
   },
 });
 
-export const { increment } = orderSlice.actions;
+export const { resetOrder } = orderSlice.actions;
 
 export const selectCurrentOrder = (state) => state.order.currentOrder;
 
