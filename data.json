@@ -1924,6 +1924,16 @@
           "state": "Madhya Pradesh",
           "pinCode": "452002",
           "address": "Indore"
+        },
+        {
+          "name": "Jack Hill",
+          "email": "jack@gmail.com",
+          "phone": "12345",
+          "street": "11th road",
+          "address": "Mumbai",
+          "state": "Maharastra",
+          "pinCode": "452003",
+          "city": "Mumbai"
         }
       ]
     },
@@ -2432,6 +2442,218 @@
         "city": "Indore",
         "state": "Madhya Pradesh",
         "pinCode": "452002"
+      },
+      "paymentMethod": "card",
+      "status": "pending"
+    },
+    {
+      "id": "3802",
+      "items": [
+        {
+          "id": "92dd",
+          "title": "Fish Steak",
+          "description": "Quality fish steak, suitable for grilling, baking, or pan-searing.",
+          "category": "groceries",
+          "price": 14.99,
+          "discountPercentage": 7,
+          "rating": 4.83,
+          "stock": 99,
+          "tags": [
+            "seafood"
+          ],
+          "sku": "XNIH1MTA",
+          "weight": 8,
+          "dimensions": {
+            "width": 20.14,
+            "height": 8.4,
+            "depth": 10.01
+          },
+          "warrantyInformation": "1 year warranty",
+          "shippingInformation": "Ships in 1 month",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 5,
+              "comment": "Great value for money!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Michael Johnson",
+              "reviewerEmail": "michael.johnson@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Would buy again!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Julian Newton",
+              "reviewerEmail": "julian.newton@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Excellent quality!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Lila Hudson",
+              "reviewerEmail": "lila.hudson@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "30 days return policy",
+          "minimumOrderQuantity": 49,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.620Z",
+            "updatedAt": "2024-05-23T08:56:21.620Z",
+            "barcode": "4250692197342",
+            "qrCode": "https://dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/groceries/Fish%20Steak/1.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Fish%20Steak/thumbnail.png",
+          "quantity": 1,
+          "user": "cb1b"
+        }
+      ],
+      "totalAmount": 14.99,
+      "totalItems": 1,
+      "user": {
+        "id": "cb1b",
+        "email": "test@123.com",
+        "password": "Murtaza123",
+        "addresses": [
+          {
+            "name": "Murtaza ",
+            "email": "murtazashabbir14@gmail.com",
+            "phone": "7869558609",
+            "street": "1109 - Noorani Nagar - Near M.Shabbir bhai Khergonewala",
+            "city": "Indore",
+            "state": "Madhya Pradesh",
+            "pinCode": "452002",
+            "address": "Indore"
+          },
+          {
+            "name": "Jack Hill",
+            "email": "jack@gmail.com",
+            "phone": "12345",
+            "street": "11th road",
+            "address": "Mumbai",
+            "state": "Maharastra",
+            "pinCode": "452003",
+            "city": "Mumbai"
+          }
+        ]
+      },
+      "selectedAddress": {
+        "name": "Jack Hill",
+        "email": "jack@gmail.com",
+        "phone": "12345",
+        "street": "11th road",
+        "address": "Mumbai",
+        "state": "Maharastra",
+        "pinCode": "452003",
+        "city": "Mumbai"
+      },
+      "paymentMethod": "card",
+      "status": "pending"
+    },
+    {
+      "id": "5c73",
+      "items": [
+        {
+          "id": "7d4d",
+          "title": "Cooking Oil",
+          "description": "Versatile cooking oil suitable for frying, sautéing, and various culinary applications.",
+          "category": "groceries",
+          "price": 4.99,
+          "discountPercentage": 18.89,
+          "rating": 4.01,
+          "stock": 22,
+          "tags": [
+            "cooking essentials"
+          ],
+          "sku": "Q6ZP1UY8",
+          "weight": 8,
+          "dimensions": {
+            "width": 8.18,
+            "height": 27.45,
+            "depth": 27.88
+          },
+          "warrantyInformation": "Lifetime warranty",
+          "shippingInformation": "Ships in 1 month",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 5,
+              "comment": "Would buy again!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Mason Parker",
+              "reviewerEmail": "mason.parker@x.dummyjson.com"
+            },
+            {
+              "rating": 3,
+              "comment": "Poor quality!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Jonathan Pierce",
+              "reviewerEmail": "jonathan.pierce@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Would buy again!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Alexander Hernandez",
+              "reviewerEmail": "alexander.hernandez@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "60 days return policy",
+          "minimumOrderQuantity": 2,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.620Z",
+            "updatedAt": "2024-05-23T08:56:21.620Z",
+            "barcode": "6707669443381",
+            "qrCode": "https://dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/groceries/Cooking%20Oil/1.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Cooking%20Oil/thumbnail.png",
+          "quantity": 1,
+          "user": "cb1b"
+        }
+      ],
+      "totalAmount": 4.99,
+      "totalItems": 1,
+      "user": {
+        "id": "cb1b",
+        "email": "test@123.com",
+        "password": "Murtaza123",
+        "addresses": [
+          {
+            "name": "Murtaza ",
+            "email": "murtazashabbir14@gmail.com",
+            "phone": "7869558609",
+            "street": "1109 - Noorani Nagar - Near M.Shabbir bhai Khergonewala",
+            "city": "Indore",
+            "state": "Madhya Pradesh",
+            "pinCode": "452002",
+            "address": "Indore"
+          },
+          {
+            "name": "Jack Hill",
+            "email": "jack@gmail.com",
+            "phone": "12345",
+            "street": "11th road",
+            "address": "Mumbai",
+            "state": "Maharastra",
+            "pinCode": "452003",
+            "city": "Mumbai"
+          }
+        ]
+      },
+      "selectedAddress": {
+        "name": "Murtaza ",
+        "email": "murtazashabbir14@gmail.com",
+        "phone": "7869558609",
+        "street": "1109 - Noorani Nagar - Near M.Shabbir bhai Khergonewala",
+        "city": "Indore",
+        "state": "Madhya Pradesh",
+        "pinCode": "452002",
+        "address": "Indore"
       },
       "paymentMethod": "card",
       "status": "pending"
