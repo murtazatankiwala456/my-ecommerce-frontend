@@ -1916,13 +1916,14 @@
       "password": "Murtaza123",
       "addresses": [
         {
-          "name": "Murtaza Tankiwala",
+          "name": "Murtaza ",
           "email": "murtazashabbir14@gmail.com",
-          "phone": "07869558609",
+          "phone": "7869558609",
           "street": "1109 - Noorani Nagar - Near M.Shabbir bhai Khergonewala",
           "city": "Indore",
           "state": "Madhya Pradesh",
-          "pinCode": "452002"
+          "pinCode": "452002",
+          "address": "Indore"
         }
       ]
     },
