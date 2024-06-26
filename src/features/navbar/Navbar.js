@@ -208,8 +208,8 @@ function NavBar({ children }) {
                     {userNavigation.map((item) => (
                       <Disclosure.Button
                         key={item.name}
-                        as="a"
-                        href={item.href}
+                        as={Link} // change as=a to as=Link to use Disclosure.Button as a Link (react-router-dom)
+                        to={item.link} // {link: "/orders"}
                         className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
                       >
                         {item.name}
