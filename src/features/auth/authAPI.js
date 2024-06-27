@@ -1,3 +1,4 @@
+// create user
 export function createUser(userData) {
   return new Promise(async (resolve) => {
     const response = await fetch("http://localhost:8080/users", {
@@ -10,6 +11,7 @@ export function createUser(userData) {
     resolve({ data });
   });
 }
+// check user
 export function checkUser(loginInfo) {
   return new Promise(async (resolve, reject) => {
     const email = loginInfo.email;
@@ -29,5 +31,12 @@ export function checkUser(loginInfo) {
     }
 
     // TODO:on server it will only return some info of user (not password)
+  });
+}
+// remove user
+export function signOut(userId) {
+  return new Promise(async (resolve) => {
+    // TODO: on server we will remove user session info
+    resolve({ data: "success" });
   });
 }
