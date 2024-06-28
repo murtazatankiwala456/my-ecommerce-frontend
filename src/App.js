@@ -26,6 +26,9 @@ import UserProfilePage from "./pages/UserProfilePage";
 import { fetchLoggedInUserAsync } from "./features/user/userSlice";
 import LogOut from "./features/auth/components/LogOut";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
+import ProtectedAdmin from "./features/auth/components/ProtectedAdmin";
+import AdminHome from "./pages/AdimHome";
+import AdminProductDetail from "./features/admin/components/AdminProductDetail";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -34,6 +37,15 @@ const router = createBrowserRouter([
       <Protected>
         <Home></Home>
       </Protected>
+    ),
+  },
+  {
+    path: "/admin",
+
+    element: (
+      <ProtectedAdmin>
+        <AdminHome></AdminHome>
+      </ProtectedAdmin>
     ),
   },
   {
@@ -66,6 +78,14 @@ const router = createBrowserRouter([
       <Protected>
         <ProductDetailPage></ProductDetailPage>
       </Protected>
+    ),
+  },
+  {
+    path: "/admin/product-detail/:id", // :id provided by react-router
+    element: (
+      <ProtectedAdmin>
+        <AdminProductDetail></AdminProductDetail>
+      </ProtectedAdmin>
     ),
   },
   {
