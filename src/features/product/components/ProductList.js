@@ -93,6 +93,7 @@ export default function ProductList() {
   useEffect(() => {
     const pagination = { _page: page, _per_page: ITEMS_PER_PAGE };
     dispatch(fetchProductsByFiltersAsync({ filter, sort, pagination }));
+    // TODO:server will filter the deleted products
   }, [dispatch, filter, sort, page]);
 
   useEffect(() => {

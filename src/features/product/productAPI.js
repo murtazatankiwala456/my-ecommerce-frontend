@@ -2,6 +2,7 @@ export function fetchAllProducts() {
   return new Promise(async (resolve) => {
     // TODO: we will not hard coded server url here...
     const response = await fetch("http://localhost:8080/products");
+
     const data = await response.json();
     resolve({ data });
   });
@@ -26,9 +27,25 @@ export function createProduct(product) {
     resolve({ data });
   });
 }
+export function updateProduct(update) {
+  return new Promise(async (resolve) => {
+    const response = await fetch(
+      "http://localhost:8080/products/" + update.id,
+      {
+        method: "PATCH",
+        body: JSON.stringify(update),
+        headers: { "content-type": "application/json" },
+      }
+    );
+    const data = await response.json();
+
+    resolve({ data });
+  });
+}
 export function fetchProductsByFilters(filter, sort, pagination) {
   // filter ={"brand":"Essence"}
   // TODO:we will on server  support mutilple value
+  // TODO:server will filter the deleted products in case of non-admin
 
   // reference for sorting functionality
   //   JSON Server's behavior for sorting changed with different versions.

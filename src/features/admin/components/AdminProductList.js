@@ -201,7 +201,7 @@ export default function AdminProductList() {
                 {/* This is our products list  */}
                 <Link
                   to="/admin/product-form"
-                  className="rounded-md mx-10 bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="rounded-md mx-10 bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   Add Product
                 </Link>
@@ -448,13 +448,21 @@ function ProductGrid({ products }) {
                         </p>
                       </div>
                     </div>
+                    {product.deleted && (
+                      <div>
+                        <p className="text-sm text-red-400">Product Deleted</p>
+                      </div>
+                    )}
                   </div>
                 </div>
               </Link>
-              <div>
-                <button className="rounded-md my-2 bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+              <div className="mt-5">
+                <Link
+                  to={`/admin/product-form/edit/${product.id}`}
+                  className="rounded-md my-2 bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >
                   Edit Product
-                </button>
+                </Link>
               </div>
             </div>
           ))}

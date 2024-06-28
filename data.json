@@ -2,12 +2,12 @@
   "products": [
     {
       "id": "1",
-      "title": "Essence Mascara Lash Princess",
+      "title": "Essence Mascara Lash",
       "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
       "category": "beauty",
       "price": 9.99,
       "discountPercentage": 7.17,
-      "rating": 4.94,
+      "rating": 0,
       "stock": 5,
       "tags": [
         "beauty",
@@ -56,9 +56,12 @@
         "qrCode": "https://dummyjson.com/public/qr-code.png"
       },
       "images": [
+        "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
         "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
       ],
-      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png"
+      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+      "discount": null,
+      "deleted": true
     },
     {
       "id": "2",
@@ -125,9 +128,9 @@
       "title": "Powder Canister",
       "description": "The Powder Canister is a finely milled setting powder designed to set makeup and control shine. With a lightweight and translucent formula, it provides a smooth and matte finish.",
       "category": "beauty",
-      "price": 14.99,
+      "price": 500,
       "discountPercentage": 18.14,
-      "rating": 3.82,
+      "rating": 0,
       "stock": 59,
       "tags": [
         "beauty",
@@ -176,9 +179,11 @@
         "qrCode": "https://dummyjson.com/public/qr-code.png"
       },
       "images": [
-        "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/1.png"
+        "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/1.png",
+        "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/thumbnail.png"
       ],
-      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/thumbnail.png"
+      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/thumbnail.png",
+      "discount": null
     },
     {
       "id": "4",
@@ -1797,22 +1802,20 @@
       "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Kiwi/thumbnail.png"
     },
     {
-      "id": "ac1d",
-      "title": "Raj Furniture",
-      "description": "Raj Furniture",
-      "brand": "Furniture Co.",
-      "category": "furniture",
-      "price": "520",
-      "discountPercentage": "5",
-      "stock": "20",
-      "thumbnail": "https://m.media-amazon.com/images/I/71u3F2NZ9gL.jpg",
+      "id": "caeb",
+      "title": "Gucci Belt",
+      "description": "Gucci Belt",
+      "brand": "Gucci",
+      "category": "beauty",
+      "price": 45,
+      "discountPercentage": 35,
+      "stock": 9,
+      "thumbnail": "https://images-cdn.ubuy.co.in/6340119aa00848332523d5b9-gucci-belt-u-07-gu-24186.jpg",
       "images": [
-        "https://m.media-amazon.com/images/I/71u3F2NZ9gL.jpg",
-        "https://m.media-amazon.com/images/I/71u3F2NZ9gL.jpg",
-        "https://m.media-amazon.com/images/I/71u3F2NZ9gL.jpg",
-        "https://m.media-amazon.com/images/I/71u3F2NZ9gL.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3GFf5cstnkS6xmvA5ySarmKkhtYsHquDC_A&s",
+        "https://images-cdn.ubuy.co.in/6340119aa00848332523d5b9-gucci-belt-u-07-gu-24186.jpg"
       ],
-      "rating": 0
+      "discount": null
     }
   ],
   "brands": [

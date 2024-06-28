@@ -1,39 +1,84 @@
 import { useDispatch, useSelector } from "react-redux";
 import {
+  clearSelectedProduct,
   createProductAsync,
+  fetchProductByIdAsync,
   selectBrands,
   selectCategories,
+  selectProductById,
+  updateProductAsync,
 } from "../../product/productSlice";
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { useForm } from "react-hook-form";
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 function ProductForm() {
   const categories = useSelector(selectCategories);
   const brands = useSelector(selectBrands);
   const dispatch = useDispatch();
+  const params = useParams();
+  const selectedProduct = useSelector(selectProductById);
   const {
     register,
     handleSubmit,
+    setValue,
+    reset,
     formState: { errors },
   } = useForm();
 
+  useEffect(() => {
+    if (params.id) {
+      dispatch(fetchProductByIdAsync(params.id));
+    } else {
+      dispatch(clearSelectedProduct());
+    }
+  }, [params.id, dispatch]);
+
+  useEffect(() => {
+    if (selectedProduct && params.id) {
+      setValue("title", selectedProduct.title);
+      setValue("description", selectedProduct.description);
+      setValue("brand", selectedProduct.brand);
+      setValue("category", selectedProduct.category);
+      setValue("price", selectedProduct.price);
+      setValue("discountPercentage", selectedProduct.discountPercentage);
+      setValue("stock", selectedProduct.stock);
+      setValue("thumbnail", selectedProduct.thumbnail);
+      setValue("image", selectedProduct.images[0]);
+    }
+  }, [setValue, params.id, selectedProduct]);
+
+  const handleDelete = () => {
+    const product = { ...selectedProduct };
+    product.deleted = true;
+    dispatch(updateProductAsync(product));
+  };
   return (
     <form
       noValidate
       onSubmit={handleSubmit((data) => {
         console.log(data);
         const product = { ...data };
-        product.images = [
-          product.image1,
-          product.image2,
-          product.image3,
-          product.thumbnail,
-        ];
+        product.images = [product.image, product.thumbnail];
+        delete product["image"];
         product.rating = 0;
-        delete product["image1"];
-        delete product["image2"];
-        delete product["image3"];
+
+        product.price = +product.price;
+
+        product.discountPercentage = +product.discountPercentage;
+        product.stock = +product.stock;
+        product.discount = +product.discount;
         console.log(product);
-        dispatch(createProductAsync(product));
+
+        if (params.id) {
+          product.id = params.id;
+          product.rating = selectedProduct.rating || 0;
+          dispatch(updateProductAsync(product));
+          reset();
+        } else {
+          dispatch(createProductAsync(product));
+          reset();
+        }
       })}
     >
       <div className="space-y-12 bg-white p-12">
@@ -214,59 +259,19 @@ function ProductForm() {
 
             <div className="sm:col-span-6">
               <label
-                htmlFor="image1"
+                htmlFor="image"
                 className="block text-sm font-medium leading-6 text-gray-900"
               >
-                Image1
+                Image
               </label>
               <div className="mt-2">
                 <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
                   <input
                     type="text"
-                    {...register("image1", {
-                      required: "image1 is required",
+                    {...register("image", {
+                      required: "image is required",
                     })}
-                    id="image1"
-                    className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="sm:col-span-6">
-              <label
-                htmlFor="image2"
-                className="block text-sm font-medium leading-6 text-gray-900"
-              >
-                Image2
-              </label>
-              <div className="mt-2">
-                <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
-                  <input
-                    type="text"
-                    {...register("image2", {
-                      required: "image2 is required",
-                    })}
-                    id="image2"
-                    className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="sm:col-span-6">
-              <label
-                htmlFor="image3"
-                className="block text-sm font-medium leading-6 text-gray-900"
-              >
-                Image3
-              </label>
-              <div className="mt-2">
-                <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
-                  <input
-                    type="text"
-                    {...register("image3", {
-                      required: "image3 is required",
-                    })}
-                    id="image3"
+                    id="image"
                     className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -360,6 +365,14 @@ function ProductForm() {
           >
             Cancel
           </button>
+          {selectedProduct && (
+            <button
+              onClick={handleDelete}
+              className="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Delete
+            </button>
+          )}
           <button
             type="submit"
             className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
