@@ -5,6 +5,7 @@ import {
   fetchBrands,
   fetchCategories,
   fetchProductById,
+  createProduct,
 } from "./productAPI";
 
 const initialState = {
@@ -32,6 +33,7 @@ export const fetchAllProductsIdAsync = createAsyncThunk(
     return response.data;
   }
 );
+
 export const fetchProductsByFiltersAsync = createAsyncThunk(
   "product/fetchProductsByFilters",
   async ({ filter, sort, pagination }) => {
@@ -55,6 +57,14 @@ export const fetchCategoriesAsync = createAsyncThunk(
   "product/fetchCategories",
   async () => {
     const response = await fetchCategories();
+    // The value we return becomes the `fulfilled` action payload
+    return response.data;
+  }
+);
+export const createProductAsync = createAsyncThunk(
+  "product/createProduct",
+  async (product) => {
+    const response = await createProduct(product);
     // The value we return becomes the `fulfilled` action payload
     return response.data;
   }
@@ -105,6 +115,13 @@ export const productSlice = createSlice({
       .addCase(fetchAllProductsIdAsync.fulfilled, (state, action) => {
         state.status = "idle";
         state.selectedProduct = action.payload;
+      })
+      .addCase(createProductAsync.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(createProductAsync.fulfilled, (state, action) => {
+        state.status = "idle";
+        state.products.push(action.payload);
       });
   },
 });
