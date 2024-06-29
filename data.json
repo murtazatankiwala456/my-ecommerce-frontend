@@ -2,7 +2,7 @@
   "products": [
     {
       "id": "1",
-      "title": "Essence Mascara Lash",
+      "title": "Essence Mascara Lash 2",
       "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
       "category": "beauty",
       "price": 9.99,
@@ -1956,6 +1956,15 @@
           "state": "Maharastra",
           "pinCode": "452003",
           "city": "Mumbai"
+        },
+        {
+          "name": "Brat",
+          "email": "brat@gmail.com",
+          "phone": "4568745623",
+          "street": "12th street",
+          "city": "Pune",
+          "state": "Maharashtra",
+          "pinCode": "4520014"
         }
       ]
     },
@@ -2686,6 +2695,240 @@
         "address": "Indore"
       },
       "paymentMethod": "card",
+      "status": "pending"
+    },
+    {
+      "id": "0a5b",
+      "items": [
+        {
+          "id": "6614",
+          "title": "Red Nail Polish",
+          "description": "The Red Nail Polish offers a rich and glossy red hue for vibrant and polished nails. With a quick-drying formula, it provides a salon-quality finish at home.",
+          "category": "beauty",
+          "price": 8.99,
+          "discountPercentage": 2.46,
+          "rating": 3.91,
+          "stock": 71,
+          "tags": [
+            "beauty",
+            "nail polish"
+          ],
+          "brand": "Nail Couture",
+          "sku": "YUIIIP4W",
+          "weight": 9,
+          "dimensions": {
+            "width": 8.11,
+            "height": 10.89,
+            "depth": 29.06
+          },
+          "warrantyInformation": "1 year warranty",
+          "shippingInformation": "Ships in 1 week",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 5,
+              "comment": "Very pleased!",
+              "date": "2024-05-23T08:56:21.619Z",
+              "reviewerName": "Leo Rivera",
+              "reviewerEmail": "leo.rivera@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Great product!",
+              "date": "2024-05-23T08:56:21.619Z",
+              "reviewerName": "Evan Reed",
+              "reviewerEmail": "evan.reed@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Highly recommended!",
+              "date": "2024-05-23T08:56:21.619Z",
+              "reviewerName": "Evelyn Sanchez",
+              "reviewerEmail": "evelyn.sanchez@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "No return policy",
+          "minimumOrderQuantity": 46,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.619Z",
+            "updatedAt": "2024-05-23T08:56:21.619Z",
+            "barcode": "3212847902461",
+            "qrCode": "https://dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/1.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/thumbnail.png",
+          "quantity": 1,
+          "user": "cb1b"
+        }
+      ],
+      "totalAmount": 8.99,
+      "totalItems": 1,
+      "user": {
+        "id": "cb1b",
+        "email": "test@123.com",
+        "password": "Murtaza123",
+        "role": "user",
+        "addresses": [
+          {
+            "name": "Murtaza ",
+            "email": "murtazashabbir14@gmail.com",
+            "phone": "7869558609",
+            "street": "1109 - Noorani Nagar - Near M.Shabbir bhai Khergonewala",
+            "city": "Indore",
+            "state": "Madhya Pradesh",
+            "pinCode": "452002",
+            "address": "Indore"
+          },
+          {
+            "name": "Jack Hill",
+            "email": "jack@gmail.com",
+            "phone": "12345",
+            "street": "11th road",
+            "address": "Mumbai",
+            "state": "Maharastra",
+            "pinCode": "452003",
+            "city": "Mumbai"
+          },
+          {
+            "name": "Brat",
+            "email": "brat@gmail.com",
+            "phone": "4568745623",
+            "street": "12th street",
+            "city": "Pune",
+            "state": "Maharashtra",
+            "pinCode": "4520014"
+          }
+        ]
+      },
+      "selectedAddress": {
+        "name": "Brat",
+        "email": "brat@gmail.com",
+        "phone": "4568745623",
+        "street": "12th street",
+        "city": "Pune",
+        "state": "Maharashtra",
+        "pinCode": "4520014"
+      },
+      "paymentMethod": "cash",
+      "status": "pending"
+    },
+    {
+      "id": "a37d",
+      "items": [
+        {
+          "id": "230f",
+          "title": "Red Nail Polish",
+          "description": "The Red Nail Polish offers a rich and glossy red hue for vibrant and polished nails. With a quick-drying formula, it provides a salon-quality finish at home.",
+          "category": "beauty",
+          "price": 8.99,
+          "discountPercentage": 2.46,
+          "rating": 3.91,
+          "stock": 71,
+          "tags": [
+            "beauty",
+            "nail polish"
+          ],
+          "brand": "Nail Couture",
+          "sku": "YUIIIP4W",
+          "weight": 9,
+          "dimensions": {
+            "width": 8.11,
+            "height": 10.89,
+            "depth": 29.06
+          },
+          "warrantyInformation": "1 year warranty",
+          "shippingInformation": "Ships in 1 week",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 5,
+              "comment": "Very pleased!",
+              "date": "2024-05-23T08:56:21.619Z",
+              "reviewerName": "Leo Rivera",
+              "reviewerEmail": "leo.rivera@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Great product!",
+              "date": "2024-05-23T08:56:21.619Z",
+              "reviewerName": "Evan Reed",
+              "reviewerEmail": "evan.reed@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Highly recommended!",
+              "date": "2024-05-23T08:56:21.619Z",
+              "reviewerName": "Evelyn Sanchez",
+              "reviewerEmail": "evelyn.sanchez@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "No return policy",
+          "minimumOrderQuantity": 46,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.619Z",
+            "updatedAt": "2024-05-23T08:56:21.619Z",
+            "barcode": "3212847902461",
+            "qrCode": "https://dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/1.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/thumbnail.png",
+          "quantity": 2,
+          "user": "cb1b"
+        }
+      ],
+      "totalAmount": 17.98,
+      "totalItems": 2,
+      "user": {
+        "id": "cb1b",
+        "email": "test@123.com",
+        "password": "Murtaza123",
+        "role": "user",
+        "addresses": [
+          {
+            "name": "Murtaza ",
+            "email": "murtazashabbir14@gmail.com",
+            "phone": "7869558609",
+            "street": "1109 - Noorani Nagar - Near M.Shabbir bhai Khergonewala",
+            "city": "Indore",
+            "state": "Madhya Pradesh",
+            "pinCode": "452002",
+            "address": "Indore"
+          },
+          {
+            "name": "Jack Hill",
+            "email": "jack@gmail.com",
+            "phone": "12345",
+            "street": "11th road",
+            "address": "Mumbai",
+            "state": "Maharastra",
+            "pinCode": "452003",
+            "city": "Mumbai"
+          },
+          {
+            "name": "Brat",
+            "email": "brat@gmail.com",
+            "phone": "4568745623",
+            "street": "12th street",
+            "city": "Pune",
+            "state": "Maharashtra",
+            "pinCode": "4520014"
+          }
+        ]
+      },
+      "selectedAddress": {
+        "name": "Brat",
+        "email": "brat@gmail.com",
+        "phone": "4568745623",
+        "street": "12th street",
+        "city": "Pune",
+        "state": "Maharashtra",
+        "pinCode": "4520014"
+      },
+      "paymentMethod": "cash",
       "status": "pending"
     }
   ]
