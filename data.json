@@ -1946,25 +1946,6 @@
           "state": "Madhya Pradesh",
           "pinCode": "452002",
           "address": "Indore"
-        },
-        {
-          "name": "Jack Hill",
-          "email": "jack@gmail.com",
-          "phone": "12345",
-          "street": "11th road",
-          "address": "Mumbai",
-          "state": "Maharastra",
-          "pinCode": "452003",
-          "city": "Mumbai"
-        },
-        {
-          "name": "Brat",
-          "email": "brat@gmail.com",
-          "phone": "4568745623",
-          "street": "12th street",
-          "city": "Pune",
-          "state": "Maharashtra",
-          "pinCode": "4520014"
         }
       ]
     },

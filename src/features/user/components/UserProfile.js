@@ -38,7 +38,7 @@ export default function UserProfile() {
     setValue("email", address.email);
     setValue("phone", address.phone);
     setValue("street", address.street);
-    setValue("address", address.city);
+    setValue("city", address.city);
     setValue("state", address.state);
     setValue("pinCode", address.pinCode);
   };
