@@ -11,7 +11,7 @@ import {
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 function ProductForm() {
   const categories = useSelector(selectCategories);
   const brands = useSelector(selectBrands);
@@ -359,12 +359,13 @@ function ProductForm() {
           </div>
         </div>
         <div className="mt-6 flex items-center justify-end gap-x-6">
-          <button
+          <Link
+            to="/admin"
             type="button"
             className="text-sm font-semibold leading-6 text-gray-900"
           >
             Cancel
-          </button>
+          </Link>
           {selectedProduct && (
             <button
               onClick={handleDelete}

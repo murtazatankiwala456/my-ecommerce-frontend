@@ -247,7 +247,7 @@
     },
     {
       "id": "5",
-      "title": "Red Nail Polish",
+      "title": "Red Nail Polish Premium",
       "description": "The Red Nail Polish offers a rich and glossy red hue for vibrant and polished nails. With a quick-drying formula, it provides a salon-quality finish at home.",
       "category": "beauty",
       "price": 8.99,
@@ -301,9 +301,11 @@
         "qrCode": "https://dummyjson.com/public/qr-code.png"
       },
       "images": [
-        "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/1.png"
+        "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/1.png",
+        "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/thumbnail.png"
       ],
-      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/thumbnail.png"
+      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/thumbnail.png",
+      "discount": null
     },
     {
       "id": "6",

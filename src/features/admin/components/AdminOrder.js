@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { ITEMS_PER_PAGE } from "../../../app/constants";
+import { ITEMS_PER_PAGE, discountedPrice } from "../../../app/constants";
 import { useEffect, useState } from "react";
 import { EyeIcon, PencilIcon } from "@heroicons/react/24/outline";
 import {
@@ -52,7 +52,8 @@ function AdminOrder() {
                             />
                           </div>
                           <span>
-                            {item.title} -#{item.quantity} -${item.price}
+                            {item.title} -#{item.quantity} -$
+                            {discountedPrice(item)}
                           </span>
                         </div>
                       ))}
