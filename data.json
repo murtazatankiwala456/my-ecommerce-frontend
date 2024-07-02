@@ -2206,7 +2206,7 @@
         "pinCode": "452002"
       },
       "paymentMethod": "cash",
-      "status": "pending"
+      "status": "dispatched"
     },
     {
       "id": "f1e8",
@@ -2364,7 +2364,7 @@
         "pinCode": "4520012"
       },
       "paymentMethod": "card",
-      "status": "pending"
+      "status": "dispatched"
     },
     {
       "id": "6cf3",
@@ -2529,7 +2529,7 @@
         "pinCode": "452002"
       },
       "paymentMethod": "card",
-      "status": "pending"
+      "status": "dispatched"
     },
     {
       "id": "3802",
@@ -2635,7 +2635,7 @@
         "city": "Mumbai"
       },
       "paymentMethod": "card",
-      "status": "pending"
+      "status": "delivered"
     },
     {
       "id": "5c73",
