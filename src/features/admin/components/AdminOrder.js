@@ -8,6 +8,7 @@ import {
   selectTotalOrders,
   updateOrderAsync,
 } from "../../order/orderSlice";
+import Pagination from "../../common/Pagination";
 
 function AdminOrder() {
   const [page, setPage] = useState(1);
@@ -46,11 +47,14 @@ function AdminOrder() {
         return "bg-purple-200 ms-4 text-purple-600 ";
     }
   };
-
-  useEffect(() => {
+  const handlePage = (page) => {
+    setPage(page);
     const pagination = { _page: page, _per_page: ITEMS_PER_PAGE };
     dispatch(fetchAllOrdersAsync(pagination));
-    // TODO:server will filter the deleted products
+  };
+
+  useEffect(() => {
+    handlePage(page);
   }, [dispatch, page]);
 
   return (
@@ -159,6 +163,12 @@ function AdminOrder() {
           </div>
         </div>
       </div>
+      <Pagination
+        page={page}
+        setPage={setPage}
+        handlePage={handlePage}
+        totalItems={totalOrders}
+      />
     </div>
   );
 }
