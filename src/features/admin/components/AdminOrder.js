@@ -54,7 +54,8 @@ function AdminOrder() {
   };
 
   useEffect(() => {
-    handlePage(page);
+    const pagination = { _page: page, _per_page: ITEMS_PER_PAGE };
+    dispatch(fetchAllOrdersAsync(pagination));
   }, [dispatch, page]);
 
   return (
