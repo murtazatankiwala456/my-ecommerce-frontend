@@ -43,7 +43,7 @@ function NavBar({ children }) {
                       <Link to="/">
                         <img
                           className="h-8 w-8"
-                          src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                          src="https://e7.pngegg.com/pngimages/282/123/png-clipart-retail-business-computer-icons-e-commerce-online-shopping-business-computer-network-angle.png"
                           alt="Your Company"
                         />
                       </Link>
@@ -85,7 +85,7 @@ function NavBar({ children }) {
                         </button>
                       </Link>
                       {items.length > 0 && (
-                        <span className="inline-flex items-center rounded-md mb-7 -ml-3 bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
+                        <span className="inline-flex items-center rounded-md mb-7 -ml-3 bg-yellow-50 px-2 py-1 text-xs font-medium text-dark-700 ring-1 ring-inset ring-yellow-600/10">
                           {items.length}
                         </span>
                       )}

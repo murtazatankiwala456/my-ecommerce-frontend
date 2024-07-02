@@ -1940,14 +1940,13 @@
       "role": "user",
       "addresses": [
         {
-          "name": "Murtaza ",
+          "name": "Murtaza Tankiwala 3",
           "email": "murtazashabbir14@gmail.com",
-          "phone": "7869558609",
-          "street": "1109 - Noorani Nagar - Near M.Shabbir bhai Khergonewala",
+          "phone": "07869558609",
+          "street": "1109 - Noorani Nagar - Near M.Shabbir ",
           "city": "Indore",
           "state": "Madhya Pradesh",
-          "pinCode": "452002",
-          "address": "Indore"
+          "pinCode": "452002"
         }
       ]
     },
@@ -3520,6 +3519,300 @@
       },
       "paymentMethod": "cash",
       "status": "cancelled"
+    },
+    {
+      "id": "a963",
+      "items": [
+        {
+          "id": "fffe",
+          "title": "Chicken Meat",
+          "description": "Fresh and tender chicken meat, suitable for various culinary preparations.",
+          "category": "groceries",
+          "price": 9.99,
+          "discountPercentage": 10.46,
+          "rating": 4.61,
+          "stock": 69,
+          "tags": [
+            "meat"
+          ],
+          "sku": "G5YEHW7B",
+          "weight": 7,
+          "dimensions": {
+            "width": 15.96,
+            "height": 29.24,
+            "depth": 26.25
+          },
+          "warrantyInformation": "Lifetime warranty",
+          "shippingInformation": "Ships in 1 month",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 5,
+              "comment": "Very satisfied!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Sophia Jones",
+              "reviewerEmail": "sophia.jones@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Great value for money!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Maya Reed",
+              "reviewerEmail": "maya.reed@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Highly recommended!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Harper Turner",
+              "reviewerEmail": "harper.turner@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "7 days return policy",
+          "minimumOrderQuantity": 46,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.620Z",
+            "updatedAt": "2024-05-23T08:56:21.620Z",
+            "barcode": "0966223559510",
+            "qrCode": "https://dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/groceries/Chicken%20Meat/1.png",
+            "https://cdn.dummyjson.com/products/images/groceries/Chicken%20Meat/2.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Chicken%20Meat/thumbnail.png",
+          "quantity": 1,
+          "user": "cb1b"
+        }
+      ],
+      "totalAmount": 9,
+      "totalItems": 1,
+      "user": {
+        "id": "cb1b",
+        "email": "test@123.com",
+        "password": "Murtaza123",
+        "role": "user",
+        "addresses": [
+          {
+            "name": "Murtaza ",
+            "email": "murtazashabbir14@gmail.com",
+            "phone": "7869558609",
+            "street": "1109 - Noorani Nagar - Near M.Shabbir bhai Khergonewala",
+            "city": "Indore",
+            "state": "Madhya Pradesh",
+            "pinCode": "452002",
+            "address": "Indore"
+          }
+        ]
+      },
+      "selectedAddress": {
+        "name": "Murtaza ",
+        "email": "murtazashabbir14@gmail.com",
+        "phone": "7869558609",
+        "street": "1109 - Noorani Nagar - Near M.Shabbir bhai Khergonewala",
+        "city": "Indore",
+        "state": "Madhya Pradesh",
+        "pinCode": "452002",
+        "address": "Indore"
+      },
+      "paymentMethod": "cash",
+      "status": "pending"
+    },
+    {
+      "id": "f9fb",
+      "items": [
+        {
+          "id": "d68e",
+          "title": "Eyeshadow Palette with Mirror",
+          "description": "The Eyeshadow Palette with Mirror offers a versatile range of eyeshadow shades for creating stunning eye looks. With a built-in mirror, it's convenient for on-the-go makeup application.",
+          "category": "beauty",
+          "price": 19.99,
+          "discountPercentage": 5.5,
+          "rating": 3.28,
+          "stock": 44,
+          "tags": [
+            "beauty",
+            "eyeshadow"
+          ],
+          "brand": "Glamour Beauty",
+          "sku": "MVCFH27F",
+          "weight": 3,
+          "dimensions": {
+            "width": 12.42,
+            "height": 8.63,
+            "depth": 29.13
+          },
+          "warrantyInformation": "1 year warranty",
+          "shippingInformation": "Ships in 2 weeks",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 4,
+              "comment": "Very satisfied!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Liam Garcia",
+              "reviewerEmail": "liam.garcia@x.dummyjson.com"
+            },
+            {
+              "rating": 1,
+              "comment": "Very disappointed!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Nora Russell",
+              "reviewerEmail": "nora.russell@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Highly impressed!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Elena Baker",
+              "reviewerEmail": "elena.baker@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "30 days return policy",
+          "minimumOrderQuantity": 32,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.618Z",
+            "updatedAt": "2024-05-23T08:56:21.618Z",
+            "barcode": "2817839095220",
+            "qrCode": "https://dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/thumbnail.png",
+          "quantity": 1,
+          "user": "cb1b"
+        }
+      ],
+      "totalAmount": 19,
+      "totalItems": 1,
+      "user": {
+        "id": "cb1b",
+        "email": "test@123.com",
+        "password": "Murtaza123",
+        "role": "user",
+        "addresses": [
+          {
+            "name": "Murtaza Tankiwala 2",
+            "email": "murtazashabbir14@gmail.com",
+            "phone": "07869558609",
+            "street": "1109 - Noorani Nagar - Near M.Shabbir ",
+            "city": "Indore",
+            "state": "Madhya Pradesh",
+            "pinCode": "452002"
+          }
+        ]
+      },
+      "selectedAddress": {
+        "name": "Murtaza Tankiwala 2",
+        "email": "murtazashabbir14@gmail.com",
+        "phone": "07869558609",
+        "street": "1109 - Noorani Nagar - Near M.Shabbir ",
+        "city": "Indore",
+        "state": "Madhya Pradesh",
+        "pinCode": "452002"
+      },
+      "paymentMethod": "cash",
+      "status": "pending"
+    },
+    {
+      "id": "627f",
+      "items": [
+        {
+          "id": "970f",
+          "title": "Red Nail Polish Premium",
+          "description": "The Red Nail Polish offers a rich and glossy red hue for vibrant and polished nails. With a quick-drying formula, it provides a salon-quality finish at home.",
+          "category": "beauty",
+          "price": 8.99,
+          "discountPercentage": 2.46,
+          "rating": 3.91,
+          "stock": 71,
+          "tags": [
+            "beauty",
+            "nail polish"
+          ],
+          "brand": "Nail Couture",
+          "sku": "YUIIIP4W",
+          "weight": 9,
+          "dimensions": {
+            "width": 8.11,
+            "height": 10.89,
+            "depth": 29.06
+          },
+          "warrantyInformation": "1 year warranty",
+          "shippingInformation": "Ships in 1 week",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 5,
+              "comment": "Very pleased!",
+              "date": "2024-05-23T08:56:21.619Z",
+              "reviewerName": "Leo Rivera",
+              "reviewerEmail": "leo.rivera@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Great product!",
+              "date": "2024-05-23T08:56:21.619Z",
+              "reviewerName": "Evan Reed",
+              "reviewerEmail": "evan.reed@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Highly recommended!",
+              "date": "2024-05-23T08:56:21.619Z",
+              "reviewerName": "Evelyn Sanchez",
+              "reviewerEmail": "evelyn.sanchez@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "No return policy",
+          "minimumOrderQuantity": 46,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.619Z",
+            "updatedAt": "2024-05-23T08:56:21.619Z",
+            "barcode": "3212847902461",
+            "qrCode": "https://dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/1.png",
+            "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/thumbnail.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/thumbnail.png",
+          "discount": null,
+          "quantity": 1,
+          "user": "cb1b"
+        }
+      ],
+      "totalAmount": 9,
+      "totalItems": 1,
+      "user": {
+        "id": "cb1b",
+        "email": "test@123.com",
+        "password": "Murtaza123",
+        "role": "user",
+        "addresses": [
+          {
+            "name": "Murtaza Tankiwala 2",
+            "email": "murtazashabbir14@gmail.com",
+            "phone": "07869558609",
+            "street": "1109 - Noorani Nagar - Near M.Shabbir ",
+            "city": "Indore",
+            "state": "Madhya Pradesh",
+            "pinCode": "452002"
+          }
+        ]
+      },
+      "selectedAddress": {
+        "name": "Murtaza Tankiwala 2",
+        "email": "murtazashabbir14@gmail.com",
+        "phone": "07869558609",
+        "street": "1109 - Noorani Nagar - Near M.Shabbir ",
+        "city": "Indore",
+        "state": "Madhya Pradesh",
+        "pinCode": "452002"
+      },
+      "paymentMethod": "cash",
+      "status": "pending"
     }
   ]
 }

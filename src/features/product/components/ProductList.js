@@ -314,7 +314,7 @@ function MobileFilter({
                                   onChange={(e) => {
                                     handleFilter(e, section, option);
                                   }}
-                                  className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                                  className="h-4 w-4 rounded border-gray-300 text-gray-600 focus:ring-gray-500"
                                 />
                                 <label
                                   htmlFor={`filter-mobile-${section.id}-${optionIdx}`}
@@ -376,7 +376,7 @@ function DesktopFilter({ handleFilter, filters }) {
                         onChange={(e) => {
                           handleFilter(e, section, option);
                         }}
-                        className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                        className="h-4 w-4 rounded border-gray-300 text-gray-600 focus:ring-gray-500"
                       />
                       <label
                         htmlFor={`filter-${section.id}-${optionIdx}`}
