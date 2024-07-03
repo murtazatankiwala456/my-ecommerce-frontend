@@ -49,8 +49,6 @@ function AdminOrder() {
   };
   const handlePage = (page) => {
     setPage(page);
-    const pagination = { _page: page, _per_page: ITEMS_PER_PAGE };
-    dispatch(fetchAllOrdersAsync(pagination));
   };
 
   useEffect(() => {
@@ -60,55 +58,59 @@ function AdminOrder() {
 
   return (
     <div className="overflow-x-auto w-full">
-      <div className="bg-gray-100 flex items-center justify-center bg-gray-100 font-sans overflow-hidden w-full">
+      <div className="bg-gray-100 flex items-center justify-center font-sans overflow-hidden w-full">
         <div className="w-full">
           <div className="bg-white shadow-md rounded my-6 w-full">
             <table className="min-w-max w-full table-auto">
               <thead>
-                <tr className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
-                  <th className="py-3 px-6 text-left">Order#</th>
-                  <th className="py-3 px-6 text-left">Items</th>
-                  <th className="py-3 px-6 text-center">Total Amount</th>
-                  <th className="py-3 px-6 text-center">Shipping Address</th>
-                  <th className="py-3 px-6 text-center">Status</th>
-                  <th className="py-3 px-6 text-center">Actions</th>
+                <tr className="bg-gray-200 text-gray-600 uppercase text-xs md:text-sm leading-normal">
+                  <th className="py-2 px-2 md:px-6 text-left">Order#</th>
+                  <th className="py-2 px-2 md:px-6 text-left">Items</th>
+                  <th className="py-2 px-2 md:px-6 text-center hidden md:table-cell">
+                    Total Amount
+                  </th>
+                  <th className="py-2 px-2 md:px-6 text-center hidden md:table-cell">
+                    Shipping Address
+                  </th>
+                  <th className="py-2 px-2 md:px-6 text-center">Status</th>
+                  <th className="py-2 px-2 md:px-6 text-center">Actions</th>
                 </tr>
               </thead>
-              <tbody className="text-gray-600 text-sm font-light">
+              <tbody className="text-gray-600 text-xs md:text-sm font-light">
                 {orders.map((order) => (
                   <tr
                     className="border-b border-gray-200 hover:bg-gray-100"
                     key={order.id}
                   >
-                    <td className="py-3 px-6 text-left whitespace-nowrap">
+                    <td className="py-2 px-2 md:px-6 text-left whitespace-nowrap">
                       <div className="flex items-center">
                         <span className="font-medium">{order.id}</span>
                       </div>
                     </td>
-                    <td className="py-3 px-6 text-left">
+                    <td className="py-2 px-2 md:px-6 text-left">
                       {order.items.map((item) => (
                         <div className="flex items-center" key={item.id}>
                           <div className="mr-2">
                             <img
-                              className="w-6 h-6 rounded-full"
+                              className="w-4 h-4 md:w-6 md:h-6 rounded-full"
                               src={item.thumbnail}
                               alt={item.title}
                             />
                           </div>
-                          <span>
+                          <span className="text-xs md:text-sm">
                             {item.title} - #{item.quantity} - $
                             {discountedPrice(item)}
                           </span>
                         </div>
                       ))}
                     </td>
-                    <td className="py-3 px-6 text-center">
+                    <td className="py-2 px-2 md:px-6 text-center hidden md:table-cell">
                       <div className="flex items-center justify-center">
                         ${order.totalAmount}
                       </div>
                     </td>
-                    <td className="py-3 px-6 text-center">
-                      <div>
+                    <td className="py-2 px-2 md:px-6 text-center hidden md:table-cell">
+                      <div className="text-xs md:text-sm">
                         <div>
                           <strong>{order.selectedAddress.name}</strong>
                         </div>
@@ -118,10 +120,11 @@ function AdminOrder() {
                         <div>{order.selectedAddress.phone}</div>
                       </div>
                     </td>
-                    <td className=" text-center">
+                    <td className="py-2 px-2 md:px-6 text-center">
                       {order.id === editableOrderId ? (
                         <div className="flex items-center justify-center">
                           <select
+                            className="text-xs md:text-sm"
                             onChange={(e) => handleUpdate(e, order)}
                             value={order.status}
                           >
@@ -135,23 +138,23 @@ function AdminOrder() {
                         <span
                           className={`${chooseColor(
                             order.status
-                          )}py-1 px-3 rounded-full text-xs`}
+                          )} py-1 px-3 rounded-full text-xs`}
                         >
                           {order.status}
                         </span>
                       )}
                     </td>
-                    <td className="py-3 px-6 text-center">
+                    <td className="py-2 px-2 md:px-6 text-center">
                       <div className="flex items-center justify-center">
-                        <div className="w-2 mr-6 transform hover:text-purple-500 hover:scale-110">
+                        <div className="w-2 mr-2 md:mr-6 transform hover:text-purple-500 hover:scale-110">
                           <EyeIcon
-                            className="w-6 h-6"
+                            className="w-4 h-4 md:w-6 md:h-6"
                             onClick={() => handleShow(order)}
                           />
                         </div>
-                        <div className="w-2  transform hover:text-purple-500 hover:scale-110">
+                        <div className="w-2 transform hover:text-purple-500 hover:scale-110">
                           <PencilIcon
-                            className="w-6 h-6"
+                            className="w-4 h-4 md:w-6 md:h-6"
                             onClick={() => handleEdit(order)}
                           />
                         </div>
