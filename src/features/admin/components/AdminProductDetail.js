@@ -47,11 +47,17 @@ export default function AdminProductDetail() {
   const dispatch = useDispatch();
   const params = useParams(); // hook provided by react-router to fetch parameters
 
-  const handleCart = (e) => {
+  const handleCart = async (e) => {
     e.preventDefault();
     const newItem = { ...product, quantity: 1, user: user.id };
     delete newItem["id"]; // to avoid creating same id on adding same product to cart....
-    dispatch(addToCartAsync(newItem));
+
+    try {
+      await dispatch(addToCartAsync(newItem)).unwrap();
+      alert("Item Added to cart!");
+    } catch (error) {
+      console.error("Failed to add item to cart: ", error);
+    }
   };
 
   useEffect(() => {
