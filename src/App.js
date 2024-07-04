@@ -31,38 +31,29 @@ import AdminHome from "./pages/AdminHome";
 import AdminProductDetail from "./features/admin/components/AdminProductDetail";
 import ProductFormPage from "./pages/ProductFormPage";
 import AdminOrderPage from "./pages/AdminOrderPage";
+
 const router = createBrowserRouter([
   {
     path: "/",
-
     element: (
       <Protected>
-        <Home></Home>
+        <Home />
       </Protected>
     ),
   },
   {
-    path: "/admin",
-
-    element: (
-      <ProtectedAdmin>
-        <AdminHome></AdminHome>
-      </ProtectedAdmin>
-    ),
-  },
-  {
     path: "/login",
-    element: <LoginPage></LoginPage>,
+    element: <LoginPage />,
   },
   {
     path: "/signup",
-    element: <SignupPage></SignupPage>,
+    element: <SignupPage />,
   },
   {
     path: "/cart",
     element: (
       <Protected>
-        <CartPage></CartPage>
+        <CartPage />
       </Protected>
     ),
   },
@@ -70,7 +61,7 @@ const router = createBrowserRouter([
     path: "/checkout",
     element: (
       <Protected>
-        <Checkout></Checkout>
+        <Checkout />
       </Protected>
     ),
   },
@@ -78,15 +69,43 @@ const router = createBrowserRouter([
     path: "/product-detail/:id", // :id provided by react-router
     element: (
       <Protected>
-        <ProductDetailPage></ProductDetailPage>
+        <ProductDetailPage />
       </Protected>
+    ),
+  },
+  {
+    path: "/order-success/:id",
+    element: <OrderSuccessPage />,
+  },
+  {
+    path: "/orders",
+    element: <UserOrderPage />,
+  },
+  {
+    path: "/profile",
+    element: <UserProfilePage />,
+  },
+  {
+    path: "/logout",
+    element: <LogOut />,
+  },
+  {
+    path: "/forgot-password", // Fixed typo from "/forgot-paasword"
+    element: <ForgotPasswordPage />,
+  },
+  {
+    path: "/admin",
+    element: (
+      <ProtectedAdmin>
+        <AdminHome />
+      </ProtectedAdmin>
     ),
   },
   {
     path: "/admin/product-detail/:id", // :id provided by react-router
     element: (
       <ProtectedAdmin>
-        <AdminProductDetail></AdminProductDetail>
+        <AdminProductDetail />
       </ProtectedAdmin>
     ),
   },
@@ -94,15 +113,7 @@ const router = createBrowserRouter([
     path: "/admin/product-form",
     element: (
       <ProtectedAdmin>
-        <ProductFormPage></ProductFormPage>
-      </ProtectedAdmin>
-    ),
-  },
-  {
-    path: "/admin/orders",
-    element: (
-      <ProtectedAdmin>
-        <AdminOrderPage></AdminOrderPage>
+        <ProductFormPage />
       </ProtectedAdmin>
     ),
   },
@@ -110,33 +121,21 @@ const router = createBrowserRouter([
     path: "/admin/product-form/edit/:id",
     element: (
       <ProtectedAdmin>
-        <ProductFormPage></ProductFormPage>
+        <ProductFormPage />
       </ProtectedAdmin>
     ),
   },
   {
-    path: "/order-success/:id",
-    element: <OrderSuccessPage></OrderSuccessPage>,
-  },
-  {
-    path: "/orders",
-    element: <UserOrderPage></UserOrderPage>,
-  },
-  {
-    path: "/profile",
-    element: <UserProfilePage></UserProfilePage>,
-  },
-  {
-    path: "/logout",
-    element: <LogOut></LogOut>,
-  },
-  {
-    path: "/forgot-paasword",
-    element: <ForgotPasswordPage></ForgotPasswordPage>,
+    path: "/admin/orders",
+    element: (
+      <ProtectedAdmin>
+        <AdminOrderPage />
+      </ProtectedAdmin>
+    ),
   },
   {
     path: "*",
-    element: <PageNotFound></PageNotFound>,
+    element: <PageNotFound />,
   },
 ]);
 
@@ -150,6 +149,7 @@ function App() {
       dispatch(fetchLoggedInUserAsync(user.id));
     }
   }, [dispatch, user]);
+
   return (
     <div className="App">
       <RouterProvider router={router} />
