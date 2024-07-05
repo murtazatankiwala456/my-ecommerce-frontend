@@ -65,11 +65,16 @@ function Checkout() {
         paymentMethod,
         status: "pending", //other status can be delivered,recieved.
       };
-      const result = await dispatch(createOrderAsync(order)).unwrap();
-      if (result) {
-        setOrderPlaced(true);
+      try {
+        const result = await dispatch(createOrderAsync(order)).unwrap();
+        if (result) {
+          setOrderPlaced(true);
+          // TODO: redirect to order success page
+        }
+      } catch (error) {
+        console.error("Error placing order:", error);
+        alert("There was an error placing your order. Please try again.");
       }
-      // TODO: redirect to order success page
     } else {
       alert("Enter Address and  Payment Method");
     }
