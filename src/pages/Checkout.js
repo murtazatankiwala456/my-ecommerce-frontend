@@ -28,6 +28,7 @@ function Checkout() {
   const user = useSelector(selectUserInfo);
   const items = useSelector(selectItems);
   const currentOrder = useSelector(selectCurrentOrder);
+  const [orderPlaced, setOrderPlaced] = useState(false);
   const totalAmount = items.reduce(
     (amount, item) => discountedPrice(item) * item.quantity + amount,
     0
@@ -53,7 +54,7 @@ function Checkout() {
     console.log(e.target.value);
     setpaymentMethod(e.target.value); // cash/card
   };
-  const handleOrder = (e) => {
+  const handleOrder = async (e) => {
     if (selectedAddress && paymentMethod) {
       const order = {
         items,
@@ -64,7 +65,10 @@ function Checkout() {
         paymentMethod,
         status: "pending", //other status can be delivered,recieved.
       };
-      dispatch(createOrderAsync(order));
+      const result = await dispatch(createOrderAsync(order)).unwrap();
+      if (result) {
+        setOrderPlaced(true);
+      }
       // TODO: redirect to order success page
     } else {
       alert("Enter Address and  Payment Method");
@@ -76,7 +80,7 @@ function Checkout() {
   return (
     <>
       {!items.length && <Navigate to="/" replace={true}></Navigate>}
-      {currentOrder && (
+      {orderPlaced && currentOrder && (
         <Navigate
           to={`/order-success/${currentOrder.id}`}
           replace={true}
