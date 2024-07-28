@@ -3,7 +3,7 @@ import {
   fetchLoggedInUserOrders,
   updateUser,
   fetchLoggedInUser,
-} from "./userAPI";
+} from "./UserAPI";
 
 const initialState = {
   userOrders: [],
