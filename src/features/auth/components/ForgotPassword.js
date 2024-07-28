@@ -1,11 +1,14 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
 export default function ForgotPassword() {
+  const [message, setMessage] = useState("");
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
   console.log(errors);
@@ -30,6 +33,8 @@ export default function ForgotPassword() {
             onSubmit={handleSubmit((data) => {
               console.log(data);
               //   TODO: implementation on backend with email
+              reset();
+              setMessage("Password has been sent to your email!");
             })}
           >
             <div>
@@ -55,6 +60,7 @@ export default function ForgotPassword() {
                 {errors.email && (
                   <p className="text-red-500">{errors.email.message}</p>
                 )}
+                <p className="text-green-600">{message}</p>
               </div>
             </div>
 
