@@ -1,7 +1,9 @@
 export function fetchAllProducts() {
   return new Promise(async (resolve) => {
     // TODO: we will not hard coded server url here...
-    const response = await fetch("http://localhost:8080/products");
+    const response = await fetch(
+      "https://my-ecommerce-database.onrender.com/products"
+    );
 
     const data = await response.json();
     resolve({ data });
@@ -10,7 +12,9 @@ export function fetchAllProducts() {
 export function fetchProductById(id) {
   return new Promise(async (resolve) => {
     // TODO: we will not hard coded server url here...
-    const response = await fetch("http://localhost:8080/products/" + id);
+    const response = await fetch(
+      "https://my-ecommerce-database.onrender.com/products/" + id
+    );
     const data = await response.json();
     resolve({ data });
   });
@@ -18,11 +22,14 @@ export function fetchProductById(id) {
 export function createProduct(product) {
   return new Promise(async (resolve) => {
     // TODO: we will not hard coded server url here...
-    const response = await fetch("http://localhost:8080/products/", {
-      method: "POST",
-      body: JSON.stringify(product),
-      headers: { "content-type": "application/json" },
-    });
+    const response = await fetch(
+      "https://my-ecommerce-database.onrender.com/products/",
+      {
+        method: "POST",
+        body: JSON.stringify(product),
+        headers: { "content-type": "application/json" },
+      }
+    );
     const data = await response.json();
     resolve({ data });
   });
@@ -30,7 +37,7 @@ export function createProduct(product) {
 export function updateProduct(update) {
   return new Promise(async (resolve) => {
     const response = await fetch(
-      "http://localhost:8080/products/" + update.id,
+      "https://my-ecommerce-database.onrender.com/products/" + update.id,
       {
         method: "PATCH",
         body: JSON.stringify(update),
@@ -84,7 +91,7 @@ export function fetchProductsByFilters(filter, sort, pagination) {
   return new Promise(async (resolve) => {
     // TODO: we will not hard coded server url here...
     const response = await fetch(
-      "http://localhost:8080/products?" + queryString
+      "https://my-ecommerce-database.onrender.com/products?" + queryString
     );
     const data = await response.json();
     const totalItems = await response.headers.get("X-Total-Count");
@@ -93,14 +100,18 @@ export function fetchProductsByFilters(filter, sort, pagination) {
 }
 export function fetchCategories() {
   return new Promise(async (resolve) => {
-    const response = await fetch("http://localhost:8080/categories");
+    const response = await fetch(
+      "https://my-ecommerce-database.onrender.com/categories"
+    );
     const data = await response.json();
     resolve({ data });
   });
 }
 export function fetchBrands() {
   return new Promise(async (resolve) => {
-    const response = await fetch("http://localhost:8080/brands");
+    const response = await fetch(
+      "https://my-ecommerce-database.onrender.com/brands"
+    );
     const data = await response.json();
     resolve({ data });
   });
