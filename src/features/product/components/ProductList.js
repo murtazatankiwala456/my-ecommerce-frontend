@@ -25,7 +25,7 @@ import { ITEMS_PER_PAGE, discountedPrice } from "../../../app/constants";
 import Pagination from "../../common/Pagination";
 
 const sortOptions = [
-  { name: "Best Rating", sort: "rating", current: false },
+  { name: "Best Rating", sort: "rating", order: "desc", current: false },
   { name: "Price: Low to High", sort: "price", order: "asc", current: false },
   { name: "Price: High to Low", sort: "price", order: "desc", current: false },
 ];
@@ -80,9 +80,7 @@ export default function ProductList() {
     setFilter(newFilter);
   };
   const handleSort = (e, option) => {
-    const sort = {
-      _sort: option.order === "desc" ? `-${option.sort}` : option.sort, //{_sort:"price", order="desc"}
-    };
+    const sort = { _sort: option.sort, _order: option.order };
     console.log(sort);
     setSort(sort);
   };
@@ -92,7 +90,7 @@ export default function ProductList() {
   };
   // making API call when dispatch or when filter is applied in a one go....
   useEffect(() => {
-    const pagination = { _page: page, _per_page: ITEMS_PER_PAGE };
+    const pagination = { _page: page, _limit: ITEMS_PER_PAGE };
     dispatch(fetchProductsByFiltersAsync({ filter, sort, pagination }));
     // TODO:server will filter the deleted products
   }, [dispatch, filter, sort, page]);
