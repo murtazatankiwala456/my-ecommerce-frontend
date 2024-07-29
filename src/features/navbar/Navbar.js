@@ -149,6 +149,19 @@ function NavBar({ children }) {
                   </div>
                 </div>
               </div>
+              <Link to="/cart">
+                <button
+                  type="button"
+                  className="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                >
+                  <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
+                </button>
+              </Link>
+              {items.length > 0 && (
+                <span className="inline-flex items-center rounded-md bg-yellow-50 mb-7 -ml-3 px-2 py-1 text-xs font-medium text-black-700 ring-1 ring-inset ring-red-600/10">
+                  {items.length}
+                </span>
+              )}
 
               <Disclosure.Panel className="md:hidden">
                 <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
@@ -188,22 +201,6 @@ function NavBar({ children }) {
                         {user.email}
                       </div>
                     </div>
-                    <Link to="/cart">
-                      <button
-                        type="button"
-                        className="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                      >
-                        <ShoppingCartIcon
-                          className="h-6 w-6"
-                          aria-hidden="true"
-                        />
-                      </button>
-                    </Link>
-                    {items.length > 0 && (
-                      <span className="inline-flex items-center rounded-md bg-red-50 mb-7 -ml-3 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
-                        {items.length}
-                      </span>
-                    )}
                   </div>
                   <div className="mt-3 space-y-1 px-2">
                     {userNavigation.map((item) => (

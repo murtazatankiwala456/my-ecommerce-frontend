@@ -15,6 +15,8 @@ import {
 import { useState } from "react";
 import { selectUserInfo } from "../features/user/userSlice";
 import { discountedPrice } from "../app/constants";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Checkout() {
   const dispatch = useDispatch();
@@ -73,10 +75,10 @@ function Checkout() {
         }
       } catch (error) {
         console.error("Error placing order:", error);
-        alert("There was an error placing your order. Please try again.");
+        toast.error("Enter Address and Payment Method");
       }
     } else {
-      alert("Enter Address and  Payment Method");
+      toast.error("Enter Address and Payment Method");
     }
     // TODO: clear cart after order
     // TODO: on server change the stock number of items
@@ -84,6 +86,7 @@ function Checkout() {
 
   return (
     <>
+      <ToastContainer />
       {!items.length && <Navigate to="/" replace={true}></Navigate>}
       {orderPlaced && currentOrder && (
         <Navigate

@@ -7,6 +7,8 @@ import { useParams } from "react-router-dom";
 import { addToCartAsync, selectItems } from "../../cart/cartSlice";
 import { selectLoggedInUser } from "../../auth/authSlice";
 import { discountedPrice } from "../../../app/constants";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // TODO: In server data we will add sizes,colors, highlights to each product
 
@@ -60,12 +62,12 @@ export default function ProductDetail() {
 
       try {
         await dispatch(addToCartAsync(newItem)).unwrap(); //The .unwrap() method is provided by createAsyncThunk and allows you to handle fulfilled and rejected cases in a try/catch block.
-        alert("Item Added to cart!");
+        toast.success("Item Added to cart!"); // Success notification
       } catch (error) {
-        console.error("Failed to add item to cart: ", error);
+        toast.error("Failed to add item to cart!"); // Error notification
       }
     } else {
-      alert("Already Added!");
+      toast.info("Already Added!"); // Info notification
     }
   };
 
@@ -74,6 +76,7 @@ export default function ProductDetail() {
   }, [dispatch, params.id]);
   return (
     <div className="bg-white">
+      <ToastContainer />
       {product && (
         <div className="pt-6">
           <nav aria-label="Breadcrumb">
