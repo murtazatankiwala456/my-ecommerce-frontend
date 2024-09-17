@@ -1,6 +1,12 @@
+import { ClipLoader } from "react-spinners";
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { checkUserAsync, selectError, selectLoggedInUser } from "../authSlice";
+import {
+  checkUserAsync,
+  selectError,
+  selectLoggedInUser,
+  selectStatus,
+} from "../authSlice";
 import { Link, Navigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline"; // Import EyeSlashIcon for the toggle
@@ -9,6 +15,7 @@ export default function Login() {
   const dispatch = useDispatch();
   const error = useSelector(selectError);
   const user = useSelector(selectLoggedInUser);
+  const status = useSelector(selectStatus);
   const [showPassword, setShowPassword] = useState(true);
   const {
     register,
@@ -127,20 +134,26 @@ export default function Login() {
               </button>
             </div>
             <div>
-              <button
-                onClick={() => {
-                  dispatch(
-                    checkUserAsync({
-                      email: "guest@example.com",
-                      password: "Guest123",
-                    })
-                  );
-                }}
-                type="button"
-                className="flex w-full justify-center rounded-md bg-green-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
-              >
-                Continue as Guest
-              </button>
+              {status === "loading" ? (
+                <div className="flex justify-center items-center">
+                  <ClipLoader size={35} color={"bg-gray-600"} loading={true} />
+                </div>
+              ) : (
+                <button
+                  onClick={() => {
+                    dispatch(
+                      checkUserAsync({
+                        email: "guest@example.com",
+                        password: "Guest123",
+                      })
+                    );
+                  }}
+                  type="button"
+                  className="flex w-full justify-center rounded-md bg-green-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
+                >
+                  Continue as Guest
+                </button>
+              )}{" "}
             </div>
           </form>
 
