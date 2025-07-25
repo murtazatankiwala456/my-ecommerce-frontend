@@ -1,5 +1,5 @@
 # Live Project
-https://main--my-ecommerce-frontend.netlify.app/login
+https://main--my-ecommerce-frontend.netlify.app
 
 # Getting Started with Create React App and Redux
 
